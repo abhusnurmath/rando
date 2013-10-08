@@ -1,3 +1,5 @@
+##This file is used an example to teach students the
+##importance of TDD
 from mathOps1 import *   # import everything from your module
 import unittest  # This loads the testing methods and a main program
 
