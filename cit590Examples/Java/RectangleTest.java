@@ -1,6 +1,6 @@
 package cit590;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -20,7 +20,7 @@ public class RectangleTest {
 		r.setLength(8);
 		assertEquals(96, r.computeArea());
 		//make sure the 0 case is covered
-		r.setLength(0);
+		r.setLength(0);	
 		assertEquals(0, r.computeArea());
 	}
 	
@@ -29,6 +29,18 @@ public class RectangleTest {
 		assertEquals(28, r.computePerimeter());
 	}
 	
-	//show this one in class
+	@Test
+	public void testIsSquare(){
+		assertEquals(false, r.isSquare());
+		r.setLength(4);
+		assertEquals(true, r.isSquare());
+	}
 	
+	@Test
+	public void testDiagonalLength(){
+		assertEquals(5, r.diagonalLength(), 0);
+		r.setBreadth(1);
+		r.setLength(1);
+		assertEquals(Math.sqrt(2), r.diagonalLength(), 0);
+	}
 }

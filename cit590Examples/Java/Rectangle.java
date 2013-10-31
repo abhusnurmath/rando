@@ -10,8 +10,18 @@ public class Rectangle {
 		this.breadth = breadth;
 	}
 	
+	/**
+	 * this is an example of default arguments
+	 * and one constructor calling another.
+	 * we will get into this later on in this class
+	 * @param length
+	 */
+	public Rectangle(int length){
+		this(length, 1);
+	}
+	
 	public int computeArea(){
-		return length * breadth;
+		return length * breadth;		
 	}
 	
 	public int computePerimeter(){
@@ -19,15 +29,16 @@ public class Rectangle {
 	}
 	
 	public boolean isSquare(){
-		return false;
+		return this.length == this.breadth;
 	}
 	
-	public int diagonalLength(){
-		return 256;
+	public double diagonalLength(){
+		return Math.sqrt(length * length + breadth * breadth);
 	}
+	
 
 	public static void main(String[] args) {
-		//do something here
+		//do something
 	}
 
 	
