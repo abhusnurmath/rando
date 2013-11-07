@@ -5,7 +5,6 @@ public class Prof extends Person {
 	private String department;
 
 	public Prof(String name, int age, boolean isMale, String deparment){
-		super(name,age,isMale);
 		this.department = deparment;
 	}
 	
