@@ -4,11 +4,10 @@ public class Person {
 
 	private String name;
 	private int age;
-	private boolean isMale; // standard convention is that boolean variable
-							// names begin
+	private boolean isMale; //convention - boolean var names begin with is...
 
-	// with 'is'
-
+	public Person(){}
+	
 	public Person(String name, int age, boolean isMale) {
 		this.name = name;
 		this.age = age;
