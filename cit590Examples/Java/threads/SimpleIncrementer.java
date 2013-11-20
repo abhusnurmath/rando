@@ -17,7 +17,6 @@ public class SimpleIncrementer implements Runnable{
 				Thread.sleep((int) (Math.random() * 1000));
 			} catch (InterruptedException e) {
 			}
-			System.out.println("incrementing");
 			s.score = s.score + 1;
 		}
 	}
