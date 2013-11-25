@@ -17,10 +17,8 @@ public class ListExample {
 	}
 	
 	static void printAll (Collection coll) {
-		Iterator iter = coll.iterator( ); 
-		while (iter.hasNext( )) {
-			System.out.println(iter.next( ) );
-			}
+		for (Object o: coll){
+			System.out.println(o);
 		}
-
+	}
 }
