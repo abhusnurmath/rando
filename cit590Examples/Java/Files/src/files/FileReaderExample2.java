@@ -7,9 +7,9 @@ import java.io.IOException;
 
 public class FileReaderExample2 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException,IOException {
+		FileReader fileReader = new FileReader("jingle.txt");
 		try {
-			FileReader fileReader = new FileReader("jingle.txt");
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 			try {
 				boolean flag = true;
@@ -22,10 +22,13 @@ public class FileReaderExample2 {
 					}
 				}
 			} catch (IOException e) {
+				System.out.println("please put proper text in the file");
 				e.printStackTrace();
 			}
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+		}
+		finally{
+			//whatever happens we want to close the stream
+			fileReader.close();
 		}
 
 	}
