@@ -15,6 +15,7 @@ public class FileReaderExample2 {
 				boolean flag = true;
 				while (flag) {
 					String s = bufferedReader.readLine();
+					//if end of file, bufferedReader returns null
 					if (s == null) {
 						flag = false;
 					} else {
