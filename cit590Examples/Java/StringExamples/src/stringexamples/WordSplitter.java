@@ -5,7 +5,8 @@ public class WordSplitter {
       + "string which I'm going to " + "use for pattern matching.";
 
   public static void main(String[] args) {
-	//the line below is basically asking, does the string contain 
+	//the line below is basically asking, does the string contain
+	//words and any random characters in between. 
     System.out.println(EXAMPLE_TEST.matches("\\w.*"));
     String[] splitString = (EXAMPLE_TEST.split("\\s+"));
     System.out.println(splitString.length);
