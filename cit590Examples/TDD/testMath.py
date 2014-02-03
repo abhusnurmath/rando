@@ -5,8 +5,19 @@ class TestMath(unittest.TestCase):  # use any meaningful name
 
     ## Your test methods go here. Indent your
     ## methods, because they belong inside the class.
-    def testSquareRoot(self):
-       
+    def testQuad(self):
+        ls = solve([1,-5,4])
+        ls.sort()
+        self.assertEquals(ls, [1.0,4.0])
+        ls = solve([2,-5,2])
+        ls.sort()
+        self.assertEquals(ls, [0.5, 2.0])
+        ls = solve([0,-5,2])
+        ls.sort()
+        self.assertEquals(ls, [0.4])
+        ls = solve([3,4,5])
+        ls.sort()
+        #assert error shows up
 
 unittest.main()  # outside the class--this tells the framework to run
 
