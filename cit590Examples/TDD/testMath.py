@@ -17,7 +17,7 @@ class TestMath(unittest.TestCase):  # use any meaningful name
         self.assertEquals(ls, [0.4])
         ls = solve([3,4,5])
         ls.sort()
-        #assert error shows up
+        #assert error shows up using self.assertRaises
 
 unittest.main()  # outside the class--this tells the framework to run
 
