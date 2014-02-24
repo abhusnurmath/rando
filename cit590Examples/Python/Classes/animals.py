@@ -16,6 +16,7 @@ class Lion(Animal):
     def Name(self):
         print 'I am a lion'
     def Sleep(self):
+        print 'lion is sleeping'
         Animal.Sleep(self)
     def MakeNoise(self):
         print 'Roar!'
@@ -24,8 +25,8 @@ class UnknownBeast(Animal):
     def Name(self):
         print 'I am the great unknown!'
 
-class TestAnimal:
-    def GoToSleep(self, animal):
+class TestAnimal():
+   def GoToSleep(self, animal):
         animal.Sleep()
     def MakeNoise(self, animal):
         animal.MakeNoise()
