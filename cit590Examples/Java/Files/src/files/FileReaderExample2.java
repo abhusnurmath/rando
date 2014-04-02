@@ -8,7 +8,7 @@ import java.io.IOException;
 public class FileReaderExample2 {
 
 	public static void main(String[] args) throws FileNotFoundException,IOException {
-		FileReader fileReader = new FileReader("jingle.txt");
+		FileReader fileReader = new FileReader("penn.txt");
 		try {
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 			try {
