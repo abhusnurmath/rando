@@ -10,10 +10,13 @@ public class TryExample2{
                         sum += Integer.parseInt(str.charAt(i) + "");
                 }catch(IndexOutOfBoundsException ioe){
                         System.out.print("Regular!  ");
+                        sum -= 1;
                 }catch(NumberFormatException nfe){
                         System.out.print("Yikes!  ");
+                        sum -= 1;
                 }finally{
                         System.out.println("i= " + i);
+                        sum += 1;
                 }
         }
         System.out.println("Sum: " + sum);
