@@ -28,7 +28,6 @@ public class Deck {
     
     Card deal(){
         Card topCard = this.deck.get(0);
-        this.deck.remove(0);
         return topCard;
     }
     
