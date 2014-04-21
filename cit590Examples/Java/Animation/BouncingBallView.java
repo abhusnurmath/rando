@@ -5,6 +5,7 @@ import java.awt.Graphics;
 import java.util.Observable;
 import java.util.Observer;
 
+
 public class BouncingBallView extends Canvas implements Observer {
 	BouncingBallController controller;
 	BouncingBallModel model;
@@ -28,7 +29,8 @@ public class BouncingBallView extends Canvas implements Observer {
 	public void paint(Graphics g) {
         g.setColor(Color.WHITE);
         g.fillRect(0, 0, getWidth(), getHeight());
-        g.setColor(Color.RED);
+        g.setColor(model.getColor());
         g.fillOval(model.getX(), model.getY(),model.BALL_SIZE, model.BALL_SIZE);
+        g.drawLine(model.getX1(), 10, model.getX2(), 10);
 	}
 }
