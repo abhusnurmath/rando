@@ -33,3 +33,5 @@ turtle.fill(1)
 turtle.fill(0)
 turtle.circle(60)
 turtle.hideturtle()
+exitonclick()
+
