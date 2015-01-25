@@ -4,7 +4,7 @@ def area_of_rectangle(length, breadth):
     # will be stored in length,
     # the second value passed to this function
     # will be stored in breadth
-    area = length * length
+    area = length * breadth
     return area
 
 def area_of_square(s):
