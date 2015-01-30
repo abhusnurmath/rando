@@ -20,7 +20,7 @@ def merge(a1, a2):
             j += 1
     # we would either have gone through
     # all of a1 or all of a2 by this time
-    # just tack on the remainging stuff at the end
+    # just tack on the remaining stuff at the end
     if i < len1:
         a3.extend(a1[i:])
     if j < len2:
