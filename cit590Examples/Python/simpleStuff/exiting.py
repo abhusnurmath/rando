@@ -9,6 +9,6 @@ while n < 100 and continue_choice:
     if n % 10 == 1:
         continue_choice = raw_input('continue?\n')
         if continue_choice == 'n' or continue_choice == 'N':
-            return
+            #fill in break, quit, sys.exit() in here
     n += 1
-print 'yayyy we printed all the sqrts!!!'
+print 'yayyy we did all our work!!!'
