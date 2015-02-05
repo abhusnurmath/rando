@@ -10,6 +10,6 @@ class Test_WC(unittest.TestCase):
     
     def test_most_frequent(self):
         result = wordCounter.most_frequent()
-        self.assertEqual(('th', 40), result)
+        self.assertEqual(('the', 40), result)
 
 unittest.main()
