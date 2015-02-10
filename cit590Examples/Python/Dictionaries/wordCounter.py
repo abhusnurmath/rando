@@ -8,6 +8,7 @@ def freqCount(line):
         #convert word to lower case
         word = word.lower()
         #takes care of word not being in dict initially
+       
         freq[word] = freq.get(word,0) + 1
 
 def most_frequent():
