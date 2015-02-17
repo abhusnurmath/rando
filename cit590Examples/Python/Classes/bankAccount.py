@@ -40,6 +40,10 @@ class BankAccount(object):
            the str function tells you how the object will be displayed
            in case it is used in something like a print statement
         '''
-        return '''The account is owned by ''' + self.getOwner() + '''
-                balance is ''' + str(self.getBalance())
+        return "The account is owned by " + self.getOwner() + \
+                " balance is " + str(self.getBalance())
+
+    #add_interest - give the account 1% interest
+    #add_owner - give joint ownership
+    
 
