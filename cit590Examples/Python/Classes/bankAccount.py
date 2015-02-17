@@ -1,9 +1,12 @@
 class BankAccount(object):
-        
-    def __init__ (self, initBalance = 0, owner = 'Arvind'):
+
+    #this gets called when you do BankAccount(a, b)
+    #balance = a, owner = b
+    def __init__(self, initBalance, owner):
         self.balance = initBalance
-        self.owner = owner
-        
+        self.owner = set([owner])
+
+    #self always has to be the first argument    
     def deposit(self, amount):
         self.balance += amount
         
@@ -40,10 +43,15 @@ class BankAccount(object):
            the str function tells you how the object will be displayed
            in case it is used in something like a print statement
         '''
-        return "The account is owned by " + self.getOwner() + \
+        return "The account is owned by " +
+                str(self.getOwner()) + \
                 " balance is " + str(self.getBalance())
 
     #add_interest - give the account 1% interest
-    #add_owner - give joint ownership
-    
+    def add_interest(self):
+        self.balance = 1.01 * self.balance
+        
+    #add_owner - give joint ownership. one more owner
+    def add_owner(self, second_owner):
+        self.owner = set([second_owner, self.owner])
 
