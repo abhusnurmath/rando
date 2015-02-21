@@ -5,10 +5,8 @@ def getAllOHs():
     line = f.readline()
     print line
     OHs = []
-    allMyLines = []
     #as long as there are lines in the file
     while line:
-        allMyLines.append(line)
         # if 'Office Hours' not found we get -1
         if line.find('Office Hours') >=0:
             OHs.append(line)
@@ -18,7 +16,8 @@ def getAllOHs():
 
 def main():
     tas = getAllOHs()
-    print tas
+    for ta in tas:
+        print ta
 
 if __name__ == '__main__':
     main()
