@@ -2,16 +2,21 @@ from addressbook import *
 import unittest
 
 class Test_AddressBook(unittest.TestCase):
+    def setUp(self):
+        self.addressbook = Address_Book('abc', [Contact('b', 12)])
+        
     def test_init(self):
-        addressbook = Address_Book('abc', [Contact('b', 12)])
-        self.assertEqual(addressbook.owner, 'abc')
-        self.assertEqual(len(addressbook.contacts), 1)
+        self.assertEqual(self.addressbook.owner, 'abc')
+        self.assertEqual(len(self.addressbook.contacts), 1)
 
     def test_add_contact(self):
-        addressbook = Address_Book('abc', [Contact('b', 12)])
-        addressbook.add_contact('c', 34)
-        self.assertEqual(len(addressbook.contacts), 2)
-        self.assertTrue(type(addressbook.contacts[1]) is Contact)
-        self.assertEqual(addressbook.contacts[1].name, 'c')
+        self.addressbook.add_contact('c', 34)
+        self.assertEqual(len(self.addressbook.contacts), 2)
+        self.assertTrue(type(self.addressbook.contacts[1]) is Contact)
+        self.assertEqual(self.addressbook.contacts[1].name, 'c')
+
+    def test_search_name(self):
+        phone = self.addressbook.search_name('b')
+        self.assertEqual(12, phone)
 
 unittest.main()
